@@ -1,8 +1,5 @@
 <?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+include_once("conexao.php");
+include_once("produto-database.php");
+alteraProduto($conexao, $_GET["id"], $_GET["nome"], $_GET["preco"], $_GET["descricao"], $_GET["categoria"]);
+header("Location: produto-lista.php");
